@@ -14,6 +14,7 @@ export default class Badge extends React.Component {
     return (
       <div>
         <ul>
+          {/* Esta funcion mapea los elementos del arreglo carrito, uno por uno */}
           {this.props.carrito.map((elemento, index) => {
             return (
               <div class="row">
@@ -50,8 +51,6 @@ export default class Badge extends React.Component {
                           </Card.Text>
                         </Card.Body>
                       </Card>
-
-                      {/** onClick={() => this.openModalEdit(elemento, index)*/}
                     </span>
                   </li>
                   <br />
@@ -62,6 +61,7 @@ export default class Badge extends React.Component {
           <br />
         </ul>
 
+        {/* Llamada al componente modal de la ventana emergente para confirmacion de compra */}
         <Modal
           iteradorSuma={this.props.iteradorSuma}
           etiqueta="formas de pago"
@@ -73,6 +73,7 @@ export default class Badge extends React.Component {
   }
 }
 
+// codigo alternativo que no funciono y fue abandonado pero me costo tanto tiempo que no lo quise borrar. Ignorar
 //   return (
 //    <div>
 //           <h1>Producto Seleccionado</h1>

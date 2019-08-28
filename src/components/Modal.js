@@ -5,12 +5,6 @@ import { Modal, Button, ButtonToolbar, Dropdown } from "react-bootstrap";
 function MyVerticallyCenteredModal(props) {
   console.log(props);
 
-  const handleClick = () => {
-    let carritoVacio = props.carritoABorrar;
-    return carritoVacio;
-  };
-
-  // const [state, setState] = React.useState([]);
   return (
     <Modal
       {...props}
@@ -27,6 +21,7 @@ function MyVerticallyCenteredModal(props) {
         <h4>El total a pagar es de: </h4>
         <p>{props.iteradorSuma} pesos</p>
 
+        {/* Este es un boton desplegable re piola que consegui en la pagina de bootstrap */}
         <Dropdown>
           <Dropdown.Toggle variant="primary" id="dropdown-basic">
             Formas de pago
@@ -42,13 +37,13 @@ function MyVerticallyCenteredModal(props) {
       <Modal.Footer>
         <Button onClick={() => props.borrador()}>Confirmar</Button>
         {/* props.onHide */}
-        {/* carrito => handleClick(props.borrador) */}
       </Modal.Footer>
     </Modal>
   );
 }
 
 function App(props) {
+  // estos hooks re piolas vienen con el codigo del modal
   const [modalShow, setModalShow] = React.useState(false);
 
   return (

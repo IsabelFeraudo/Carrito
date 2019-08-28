@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import ProductList from "/home/isabel/carrito/src/components/Lista.js";
 
+// En este componente se definen en un arreglo, los productos involucrados
 class App extends React.Component {
   state = {
     products: [
@@ -46,30 +47,8 @@ class App extends React.Component {
 
   render() {
     return (
-      // {this.state.products.map((elemento, index) => {
-      //   return (
-      //     <div class="container-fluid">
-      //       <li key={id}>
-      //         <span>
-      //           <Item
-      //             name={elemento.name}
-      //             price={elemento.price}
-      //             brand={elemento.brand}
-      //           />
-      //           <button >Agregar</button>
-      //         </span>
-      //       </li>
-      //     </div>
-      //   );
-      // })}
-
       <span>
-        <ProductList
-          products={this.state.products}
-          // onSaveProduct={this.handleSaveProduct}
-          // onIncrementProduct={this.handleSaveProduct}
-          // onRemoveProduct={this.handlerRemoveProduct}
-        />
+        <ProductList products={this.state.products} />
       </span>
     );
   }

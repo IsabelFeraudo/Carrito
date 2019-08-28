@@ -5,46 +5,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default class Item extends React.Component {
   state = {};
 
-  // handleClickAdd = props => {
-  //   this.setState({
-  //     clicked: true,
-  //     cant: this.state.cant + 1,
-  //     subtotal: (this.state.cant + 1) * this.props.price
-  //     // total: this.state.total + this.state.subtotal
-  //   });
-  // };
-
-  // handleClickRemove = () => {
-  //   if (this.state.cant > 0) {
-  //     this.setState({
-  //       cant: this.state.cant - 1,
-  //       subtotal: (this.state.cant - 1) * this.props.price
-  //       //   total: this.state.total + ((this.state.cant-1) * this.props.price
-  //     });
-  //   } else {
-  //   }
-  // };
-
-  // handleClickOK=(index)=>{
-  //     this.setState({
-  //         total: this.state.total + this.setState.subtotal
-  //     })
-  // }
-
-  // handleSubtotal=(e)=>{
-  //   this.setState({
-  //     e:this.state.cant * this.props.price
-  //   });
-
-  // }
-
   render() {
+    // consolelog de las props para probar si se estan pasando correctamente
     console.log(this.props);
     return (
       <div>
         <div>
           <br />
-          <h2>{this.props.subtotal}</h2>
+
           <h2>{this.props.name}</h2>
           <h4>Marca: {this.props.brand}</h4>
           <p>Precio: {this.props.price}</p>

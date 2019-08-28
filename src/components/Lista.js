@@ -93,6 +93,7 @@ class Lista extends React.Component {
     this.setState({ carrito: carritoItem });
   };
 
+  // Funcion que calcula el total a pagar, sumando todos los subtotales
   iteradorSuma = carrito => {
     let total = 0;
     carrito.forEach(product => {
@@ -142,6 +143,9 @@ class Lista extends React.Component {
           </div>
 
           <div className="col-300">
+            {/* 
+            Llamada al badge del lado derecho de la pantalla que contendra:
+            tarjetas mostrando los productos anadidos al carrito y el boton de confirmacion */}
             <Badge
               //el state se puede usar siempre y cuando se encuentre dentro del mismo componente
               carrito={this.state.carrito}
@@ -153,8 +157,6 @@ class Lista extends React.Component {
               }
               iteradorSuma={this.iteradorSuma(this.state.carrito)}
               borrador={() => this.funcionBorradora()}
-              // cant={this.state.products.cant}
-              // products={this.props.products}
               carritoABorrar={this.state.carrito}
             />
           </div>
@@ -163,6 +165,7 @@ class Lista extends React.Component {
     );
   }
 }
-/**NO SE PUEDEN ITERAR COMPONENTES, SOLO ARREGLOS */
+/**NOTA
+ * NO SE PUEDEN ITERAR COMPONENTES, SOLO ARREGLOS */
 
 export default Lista;
