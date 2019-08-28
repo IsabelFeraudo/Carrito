@@ -65,7 +65,7 @@ export default class Badge extends React.Component {
         <Modal
           iteradorSuma={this.props.iteradorSuma}
           etiqueta="formas de pago"
-          // borrador={this.props.borrador}
+          borrador={this.props.borrador}
           carritoABorrar={this.props.carritoABorrar}
         />
       </div>

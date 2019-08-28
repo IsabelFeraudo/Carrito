@@ -2,15 +2,15 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, ButtonToolbar, Dropdown } from "react-bootstrap";
 
-// const handleClick = props => {
-//   let carritoVacio = props.borrador;
-//   return carritoVacio;
-// };
-
 function MyVerticallyCenteredModal(props) {
   console.log(props);
 
-  const [state, setState] = React.useState([]);
+  const handleClick = () => {
+    let carritoVacio = props.carritoABorrar;
+    return carritoVacio;
+  };
+
+  // const [state, setState] = React.useState([]);
   return (
     <Modal
       {...props}
@@ -40,13 +40,7 @@ function MyVerticallyCenteredModal(props) {
         </Dropdown>
       </Modal.Body>
       <Modal.Footer>
-        <Button
-        // onClick={state => {
-        //   setState({props.carritoABorrar});
-        // }}
-        >
-          Confirmar
-        </Button>
+        <Button onClick={() => props.borrador()}>Confirmar</Button>
         {/* props.onHide */}
         {/* carrito => handleClick(props.borrador) */}
       </Modal.Footer>
@@ -68,7 +62,7 @@ function App(props) {
           iteradorSuma={props.iteradorSuma}
           show={modalShow}
           onHide={() => setModalShow(false)}
-          // borrador={props.borrador}
+          borrador={props.borrador}
           carritoABorrar={props.carritoABorrar}
         />
       </ButtonToolbar>

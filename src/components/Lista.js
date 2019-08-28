@@ -27,6 +27,11 @@ class Lista extends React.Component {
     carrito: []
   };
 
+  funcionBorradora = carrito => {
+    this.setState({ carrito: [] });
+    return carrito;
+  };
+
   /**funcion encargada de incrementar la cantidad de un producto en el carrito
    * en caso que lo contenga, en caso contrario, lo agrega
    * @param elem elemento a agregar
@@ -62,11 +67,6 @@ class Lista extends React.Component {
     }
     this.setState({ carrito: carritoItem });
   };
-
-  // funcionBorradora = carrito => {
-  //   this.setState({ carrito: [] });
-  //   return carrito;
-  // };
 
   /**funcion encargada de decrementar la cantidad de un producto en el carrito
    * en caso que contenga mas de uno, en caso de que sea uno, lo quita del carrito
@@ -152,7 +152,7 @@ class Lista extends React.Component {
                 this.handleClickRemove(elemento, carrito)
               }
               iteradorSuma={this.iteradorSuma(this.state.carrito)}
-              // borrador={this.funcionBorradora(this.state.carrito)}
+              borrador={() => this.funcionBorradora()}
               // cant={this.state.products.cant}
               // products={this.props.products}
               carritoABorrar={this.state.carrito}
