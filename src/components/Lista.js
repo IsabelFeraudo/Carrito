@@ -11,7 +11,7 @@ class Item extends React.Component {
           <p>Producto: {this.props.name}</p>
           <p>Marca: {this.props.brand}</p>
           <p>Precio: {this.props.price}</p>
-          {/* <p>Subtotal: {this.props.subtotal}</p> */}
+          {/*<p>Subtotal: {this.props.subtotal}</p> */}
 
           {/* {this.props.id} */}
         </div>
