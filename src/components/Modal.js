@@ -41,9 +41,9 @@ function MyVerticallyCenteredModal(props) {
       </Modal.Body>
       <Modal.Footer>
         <Button
-          onClick={state => {
-            setState({props.carritoABorrar});
-          }}
+        // onClick={state => {
+        //   setState({props.carritoABorrar});
+        // }}
         >
           Confirmar
         </Button>
